@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alembic (ALM) — a proof-of-work still</title>
+<meta name="description" content="Alembic (ALM) is a CPU-mineable RandomX proof-of-work network. Every rule was fixed in public source code before block zero. No dev fee, no premine, 56,580,000 cap.">
+<link rel="icon" type="image/x-icon" href="alembic.ico">
+<style>
+  :root{--bg:#0f1c15;--bg2:#16241b;--panel:#1b2c20;--line:#2e4a38;--text:#dce8de;--dim:#8fa89a;--glass:#2e6b4f;--glass-l:#6fbf95;--copper:#c47a3a;--copper-l:#e8a868;--amber:#e8a13c;--cream:#e8e0cc}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 Georgia,'Times New Roman',serif}
+  a{color:var(--glass-l);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:900px;margin:0 auto;padding:28px 22px 60px}
+  header{border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:30px}
+  .mark{display:flex;align-items:center;gap:14px}
+  .mark img{width:52px;height:52px}
+  .mark h1{font-size:26px;margin:0;letter-spacing:3px;color:var(--cream)}
+  .mark .tag{color:var(--copper-l);font-style:italic;font-size:14px}
+  nav{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 18px;font-family:monospace;font-size:13.5px}
+  nav a{color:var(--glass-l)}
+  nav span{color:var(--dim)}
+  h2{color:var(--copper);font-size:21px;margin:38px 0 12px;letter-spacing:1px}
+  h3{color:var(--glass-l);font-size:17px;margin:24px 0 8px}
+  code,pre{font-family:Consolas,monospace;font-size:13.5px}
+  code{background:var(--panel);border:1px solid var(--line);padding:1px 6px;border-radius:4px}
+  pre{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:14px 16px;overflow-x:auto}
+  pre code{background:none;border:none;padding:0}
+  table{border-collapse:collapse;width:100%;font-size:15px}
+  td{border-bottom:1px solid var(--line);padding:8px 10px;vertical-align:top}
+  td:first-child{color:var(--dim);white-space:nowrap;width:220px}
+  .note{border-left:3px solid var(--copper);background:var(--panel);padding:12px 16px;border-radius:0 8px 8px 0;color:var(--dim);font-size:14.5px}
+  footer{margin-top:50px;border-top:1px solid var(--line);padding-top:16px;color:var(--dim);font-size:13.5px}
+  .hero{text-align:center;padding:34px 0 10px}
+  .hero img{width:130px;height:130px}
+  .hero h1{color:var(--cream);letter-spacing:6px;font-size:34px;margin:14px 0 4px}
+  .hero .slogan{color:var(--copper-l);font-style:italic}
+  .hero .chips{margin-top:16px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;font-family:monospace;font-size:12.5px}
+  .chip{border:1px solid var(--glass);border-radius:14px;padding:3px 12px;color:var(--cream);background:var(--panel)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:14px}
+  .card{border:1px solid var(--line);border-radius:10px;padding:14px 16px;background:var(--panel)}
+  .card h3{margin:0 0 6px}
+  .card p{margin:0;color:var(--dim);font-size:14.5px}
+</style>
+</head>
+<body><div class="wrap">
+<header>
+  <div class="mark">
+    <img src="alembic.ico" alt="Alembic">
+    <div><h1>ALEMBIC</h1><div class="tag">the form was set before the fire</div></div>
+  </div>
+  <nav>
+    <a href="index.html">Overview</a><span>·</span>
+    <a href="downloads/">Downloads</a><span>·</span>
+    <a href="explorer/">Explorer</a><span>·</span>
+    <a href="MINING.md">Mining</a><span>·</span>
+    <a href="WALLET.md">Wallet</a><span>·</span>
+    <a href="WHITEPAPER.md">Whitepaper</a><span>·</span>
+    <a href="SECURITY.md">Security</a><span>·</span>
+    <a href="TRANSPARENCY.md">Transparency</a><span>·</span>
+    <a href="CHANGELOG.md">Changelog</a><span>·</span>
+    <a href="https://github.com/alembic-core/alembic">Source</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <img src="alembic-icon.png" alt="Alembic">
+  <h1>ALEMBIC</h1>
+  <div class="slogan">the form was set before the fire</div>
+  <div class="chips">
+    <span class="chip">RandomX PoW</span><span class="chip">160 s blocks</span>
+    <span class="chip">41 ALM reward</span><span class="chip">Cap 56,580,000</span><span class="chip">No dev fee</span>
+  </div>
+</div>
+
+<h2>What is Alembic</h2>
+<p>Alembic (ALM) is a proof-of-work network running RandomX on ordinary processors. The name comes from the alambic — the still: a sealed vessel whose geometry is fixed before the fire is lit. Nothing is added mid-run; the spirit that arrives in the receiver was determined entirely by the shape of the apparatus. Alembic applies that discipline to a currency. Every governing constant — total supply, block cadence, stage-1 reward, halving rhythm, difficulty rule — was committed to public source code and published before block zero existed.</p>
+<p>No dev fee, no treasury address, no unlock calendar. Zero coins existed before the genesis block; every coin in existence came out of a block reward, paid in full to the miner who assembled that block.</p>
+
+<div class="note">If any sentence on this site ever disagrees with the chain, the chain wins — every time. The constants below live in source code, not in this text.</div>
+
+<h2>Emission schedule</h2>
+<table>
+  <tr><td>Block time</td><td>160 seconds</td></tr>
+  <tr><td>Blocks per day</td><td>540</td></tr>
+  <tr><td>Stage-1 reward</td><td>41 ALM</td></tr>
+  <tr><td>Daily issuance, stage 1</td><td>22,140 ALM</td></tr>
+  <tr><td>Halving interval</td><td>690,000 blocks (~3.5 years)</td></tr>
+  <tr><td>Max supply</td><td>2 × 41 × 690,000 = <b>56,580,000 ALM</b></td></tr>
+  <tr><td>Premine</td><td>0</td></tr>
+  <tr><td>Dev fee</td><td>0</td></tr>
+</table>
+
+<h2>Why a still</h2>
+<div class="grid">
+  <div class="card"><h3>Sealed geometry</h3><p>The vessel's shape decides the product. In Alembic, the code decides everything — and the code was published first.</p></div>
+  <div class="card"><h3>Nothing added mid-run</h3><p>No dev fee, no treasury, no unlock calendar. The reward arrives in full to the miner, like distillate into the receiver.</p></div>
+  <div class="card"><h3>Ordinary fire</h3><p>RandomX is memory-heavy and re-aims at every block, so a warehouse of special machines keeps no lasting edge over one desktop CPU.</p></div>
+  <div class="card"><h3>Readable apparatus</h3><p>Full source, explorer, checksums and documentation are public. Verify the vessel yourself before you light anything.</p></div>
+</div>
+
+<h2>Get started</h2>
+<table>
+  <tr><td>Wallet (Windows)</td><td><a href="downloads/">downloads/</a></td></tr>
+  <tr><td>Mining guide</td><td><a href="MINING.md">MINING.md</a></td></tr>
+  <tr><td>Wallet guide</td><td><a href="WALLET.md">WALLET.md</a></td></tr>
+  <tr><td>Whitepaper</td><td><a href="WHITEPAPER.md">WHITEPAPER.md</a></td></tr>
+  <tr><td>Block explorer</td><td><a href="explorer/">explorer/</a></td></tr>
+</table>
+
+<footer>
+  Alembic (ALM) — RandomX proof-of-work. Experimental software, provided as-is, for study.
+  <br>Source: <a href="https://github.com/alembic-core/alembic">github.com/alembic-core/alembic</a> · Site: <a href="https://alembic-core.github.io/alembic/">alembic-core.github.io/alembic</a>
+</footer>
+</div></body></html>
